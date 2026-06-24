@@ -1,0 +1,229 @@
+{
+	"version": 2,
+	"builds": [
+		{
+			"src": "apps/express-api/public/**/*",
+			"use": "@vercel/static"
+		},
+		{
+			"src": "apps/express-api/src/app.js",
+			"use": "@vercel/node"
+		},
+		{
+			"src": "apps/astro-ssg/package.json",
+			"use": "@vercel/static-build",
+			"config": { "distDir": "dist" }
+		},
+		{
+			"src": "apps/hexo-ssg/package.json",
+			"use": "@vercel/static-build",
+			"config": { "distDir": "public" }
+		},
+		{
+			"src": "apps/next-ssg/package.json",
+			"use": "@vercel/static-build",
+			"config": { "distDir": "out" }
+		},
+		{
+			"src": "apps/nuxt4-ssg/package.json",
+			"use": "@vercel/static-build",
+			"config": { "distDir": ".output/public" }
+		},
+		{
+			"src": "apps/react-spa/package.json",
+			"use": "@vercel/static-build"
+		},
+		{
+			"src": "apps/vanilla-spa/**/*",
+			"use": "@vercel/static",
+			"config": { "distDir": "vanilla-spa" }
+		},
+		{
+			"src": "apps/vitepress-ssg/package.json",
+			"use": "@vercel/static-build",
+			"config": {
+				"distDir": "docs/.vitepress/dist"
+			}
+		},
+		{
+			"src": "apps/vue3-spa/package.json",
+			"use": "@vercel/static-build"
+		},
+		{
+			"src": "apps/vuepress-ssg/package.json",
+			"use": "@vercel/static-build",
+			"config": {
+				"distDir": "docs/.vuepress/dist"
+			}
+		},
+		{
+			"src": "apps/webpack-ejs-mpa/package.json",
+			"use": "@vercel/static-build",
+			"config": {
+				"distDir": "dist"
+			}
+		}
+	],
+	"rewrites": [
+		{
+			"source": "/astro-ssg",
+			"destination": "/apps/astro-ssg/index.html"
+		},
+		{
+			"source": "/astro-ssg/",
+			"destination": "/apps/astro-ssg/index.html"
+		},
+		{
+			"source": "/astro-ssg/:path*",
+			"destination": "/apps/astro-ssg/:path*"
+		},
+		{
+			"source": "/hexo-ssg",
+			"destination": "/apps/hexo-ssg/index.html"
+		},
+		{
+			"source": "/hexo-ssg/",
+			"destination": "/apps/hexo-ssg/index.html"
+		},
+		{
+			"source": "/hexo-ssg/:path*",
+			"destination": "/apps/hexo-ssg/:path*"
+		},
+		{
+			"source": "/hexo-ssg/:path*/",
+			"destination": "/apps/hexo-ssg/:path*/index.html"
+		},
+		{
+			"source": "/next-ssg",
+			"destination": "/apps/next-ssg/index.html"
+		},
+		{
+			"source": "/next-ssg/",
+			"destination": "/apps/next-ssg/index.html"
+		},
+		{
+			"source": "/next-ssg/_next/:path*",
+			"destination": "/apps/next-ssg/_next/:path*"
+		},
+		{
+			"source": "/next-ssg/:file*.:ext",
+			"destination": "/apps/next-ssg/:file*.:ext"
+		},
+		{
+			"source": "/next-ssg/:path*",
+			"destination": "/apps/next-ssg/:path*.html"
+		},
+		{
+			"source": "/next-ssg/:path*/",
+			"destination": "/apps/next-ssg/:path*.html"
+		},
+		{
+			"source": "/next-ssg/:path*",
+			"destination": "/apps/next-ssg/:path*"
+		},
+		{
+			"source": "/nuxt4-ssg",
+			"destination": "/apps/nuxt4-ssg/index.html"
+		},
+		{
+			"source": "/nuxt4-ssg/",
+			"destination": "/apps/nuxt4-ssg/index.html"
+		},
+		{
+			"source": "/nuxt4-ssg/:path*",
+			"destination": "/apps/nuxt4-ssg/:path*"
+		},
+		{
+			"source": "/react-spa",
+			"destination": "/apps/react-spa/index.html"
+		},
+		{
+			"source": "/react-spa/",
+			"destination": "/apps/react-spa/index.html"
+		},
+		{
+			"source": "/react-spa/:file*.:ext",
+			"destination": "/apps/react-spa/:file*.:ext"
+		},
+		{
+			"source": "/react-spa/:path*",
+			"destination": "/apps/react-spa/index.html"
+		},
+		{
+			"source": "/vanilla-spa/",
+			"destination": "/apps/vanilla-spa/index.html"
+		},
+		{
+			"source": "/vanilla-spa/:path*",
+			"destination": "/apps/vanilla-spa/:path*"
+		},
+		{
+			"source": "/vitepress-ssg/",
+			"destination": "/apps/vitepress-ssg/index.html"
+		},
+		{
+			"source": "/vitepress-ssg/:path*",
+			"destination": "/apps/vitepress-ssg/:path*"
+		},
+		{
+			"source": "/vue3-spa",
+			"destination": "/apps/vue3-spa/index.html"
+		},
+		{
+			"source": "/vue3-spa/",
+			"destination": "/apps/vue3-spa/index.html"
+		},
+		{
+			"source": "/vue3-spa/:file*.:ext",
+			"destination": "/apps/vue3-spa/:file*.:ext"
+		},
+		{
+			"source": "/vue3-spa/:path*",
+			"destination": "/apps/vue3-spa/index.html"
+		},
+		{
+			"source": "/vuepress-ssg/",
+			"destination": "/apps/vuepress-ssg/index.html"
+		},
+		{
+			"source": "/vuepress-ssg/:path*",
+			"destination": "/apps/vuepress-ssg/:path*"
+		},
+		{
+			"source": "/webpack-ejs-mpa",
+			"destination": "/apps/webpack-ejs-mpa/home/index.html"
+		},
+		{
+			"source": "/webpack-ejs-mpa/",
+			"destination": "/apps/webpack-ejs-mpa/home/index.html"
+		},
+		{
+			"source": "/webpack-ejs-mpa/:path*",
+			"destination": "/apps/webpack-ejs-mpa/:path*"
+		},
+		{
+			"source": "/api/:path*",
+			"destination": "/apps/express-api/src/app.js"
+		},
+		{
+			"source": "/",
+			"destination": "/apps/express-api/src/app.js"
+		},
+		{
+			"source": "/js/:path*",
+			"destination": "/apps/express-api/public/js/:path*"
+		},
+		{
+			"source": "/css/:path*",
+			"destination": "/apps/express-api/public/css/:path*"
+		},
+		{
+			"source": "/images/:path*",
+			"destination": "/apps/express-api/public/images/:path*"
+		},
+		{
+			"source": "/:path*",
+			"destination": "/apps/express-api/src/app.js"
+		}
+	]
+}
