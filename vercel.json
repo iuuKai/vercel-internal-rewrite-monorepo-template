@@ -66,11 +66,7 @@
 	],
 	"rewrites": [
 		{
-			"source": "/astro-ssg",
-			"destination": "/apps/astro-ssg/index.html"
-		},
-		{
-			"source": "/astro-ssg/",
+			"source": "/astro-ssg(/?)",
 			"destination": "/apps/astro-ssg/index.html"
 		},
 		{
@@ -78,11 +74,7 @@
 			"destination": "/apps/astro-ssg/:path*"
 		},
 		{
-			"source": "/hexo-ssg",
-			"destination": "/apps/hexo-ssg/index.html"
-		},
-		{
-			"source": "/hexo-ssg/",
+			"source": "/hexo-ssg(/?)",
 			"destination": "/apps/hexo-ssg/index.html"
 		},
 		{
@@ -90,15 +82,7 @@
 			"destination": "/apps/hexo-ssg/:path*"
 		},
 		{
-			"source": "/hexo-ssg/:path*/",
-			"destination": "/apps/hexo-ssg/:path*/index.html"
-		},
-		{
-			"source": "/next-ssg",
-			"destination": "/apps/next-ssg/index.html"
-		},
-		{
-			"source": "/next-ssg/",
+			"source": "/next-ssg(/?)",
 			"destination": "/apps/next-ssg/index.html"
 		},
 		{
@@ -106,27 +90,15 @@
 			"destination": "/apps/next-ssg/_next/:path*"
 		},
 		{
-			"source": "/next-ssg/:file*.:ext",
-			"destination": "/apps/next-ssg/:file*.:ext"
+			"source": "/next-ssg/:path*.:ext",
+			"destination": "/apps/next-ssg/:path*.:ext"
 		},
 		{
 			"source": "/next-ssg/:path*",
 			"destination": "/apps/next-ssg/:path*.html"
 		},
 		{
-			"source": "/next-ssg/:path*/",
-			"destination": "/apps/next-ssg/:path*.html"
-		},
-		{
-			"source": "/next-ssg/:path*",
-			"destination": "/apps/next-ssg/:path*"
-		},
-		{
-			"source": "/nuxt4-ssg",
-			"destination": "/apps/nuxt4-ssg/index.html"
-		},
-		{
-			"source": "/nuxt4-ssg/",
+			"source": "/nuxt4-ssg(/?)",
 			"destination": "/apps/nuxt4-ssg/index.html"
 		},
 		{
@@ -134,67 +106,43 @@
 			"destination": "/apps/nuxt4-ssg/:path*"
 		},
 		{
-			"source": "/react-spa",
+			"source": "/react-spa(/?)",
 			"destination": "/apps/react-spa/index.html"
 		},
 		{
-			"source": "/react-spa/",
-			"destination": "/apps/react-spa/index.html"
-		},
-		{
-			"source": "/react-spa/:file*.:ext",
-			"destination": "/apps/react-spa/:file*.:ext"
+			"source": "/react-spa/:path*.:ext",
+			"destination": "/apps/react-spa/:path*.:ext"
 		},
 		{
 			"source": "/react-spa/:path*",
 			"destination": "/apps/react-spa/index.html"
 		},
 		{
-			"source": "/vanilla-spa/",
-			"destination": "/apps/vanilla-spa/index.html"
-		},
-		{
 			"source": "/vanilla-spa/:path*",
 			"destination": "/apps/vanilla-spa/:path*"
-		},
-		{
-			"source": "/vitepress-ssg/",
-			"destination": "/apps/vitepress-ssg/index.html"
 		},
 		{
 			"source": "/vitepress-ssg/:path*",
 			"destination": "/apps/vitepress-ssg/:path*"
 		},
 		{
-			"source": "/vue3-spa",
+			"source": "/vue3-spa(/?)",
 			"destination": "/apps/vue3-spa/index.html"
 		},
 		{
-			"source": "/vue3-spa/",
-			"destination": "/apps/vue3-spa/index.html"
-		},
-		{
-			"source": "/vue3-spa/:file*.:ext",
-			"destination": "/apps/vue3-spa/:file*.:ext"
+			"source": "/vue3-spa/:path*.:ext",
+			"destination": "/apps/vue3-spa/:path*.:ext"
 		},
 		{
 			"source": "/vue3-spa/:path*",
 			"destination": "/apps/vue3-spa/index.html"
 		},
 		{
-			"source": "/vuepress-ssg/",
-			"destination": "/apps/vuepress-ssg/index.html"
-		},
-		{
 			"source": "/vuepress-ssg/:path*",
 			"destination": "/apps/vuepress-ssg/:path*"
 		},
 		{
-			"source": "/webpack-ejs-mpa",
-			"destination": "/apps/webpack-ejs-mpa/home/index.html"
-		},
-		{
-			"source": "/webpack-ejs-mpa/",
+			"source": "/webpack-ejs-mpa(/?)",
 			"destination": "/apps/webpack-ejs-mpa/home/index.html"
 		},
 		{
@@ -203,10 +151,6 @@
 		},
 		{
 			"source": "/api/:path*",
-			"destination": "/apps/express-api/src/app.js"
-		},
-		{
-			"source": "/",
 			"destination": "/apps/express-api/src/app.js"
 		},
 		{
@@ -220,6 +164,10 @@
 		{
 			"source": "/images/:path*",
 			"destination": "/apps/express-api/public/images/:path*"
+		},
+		{
+			"source": "/",
+			"destination": "/apps/express-api/src/app.js"
 		},
 		{
 			"source": "/:path*",
