@@ -154,16 +154,8 @@
 			"destination": "/apps/express-api/src/app.js"
 		},
 		{
-			"source": "/js/:path*",
-			"destination": "/apps/express-api/public/js/:path*"
-		},
-		{
-			"source": "/css/:path*",
-			"destination": "/apps/express-api/public/css/:path*"
-		},
-		{
-			"source": "/images/:path*",
-			"destination": "/apps/express-api/public/images/:path*"
+			"source": "/(js|css|images)/:path*",
+			"destination": "/apps/express-api/public/$1/:path*"
 		},
 		{
 			"source": "/:path(.*)",
