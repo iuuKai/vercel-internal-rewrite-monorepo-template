@@ -82,12 +82,12 @@
 			"destination": "/apps/hexo-ssg/:path*"
 		},
 		{
-			"source": "/next-ssg(/?)",
-			"destination": "/apps/next-ssg/index.html"
+			"source": "/hexo-ssg/:path*/",
+			"destination": "/apps/hexo-ssg/:path*/index.html"
 		},
 		{
-			"source": "/next-ssg/_next/:path*",
-			"destination": "/apps/next-ssg/_next/:path*"
+			"source": "/next-ssg(/?)",
+			"destination": "/apps/next-ssg/index.html"
 		},
 		{
 			"source": "/next-ssg/:path*.:ext",
