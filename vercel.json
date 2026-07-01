@@ -78,6 +78,10 @@
 			"destination": "/apps/hexo-ssg/index.html"
 		},
 		{
+			"source": "/hexo-ssg/:path*/",
+			"destination": "/apps/hexo-ssg/:path*/index.html"
+		},
+		{
 			"source": "/hexo-ssg/:path*",
 			"destination": "/apps/hexo-ssg/:path*"
 		},
