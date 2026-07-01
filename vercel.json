@@ -78,7 +78,7 @@
 			"destination": "/apps/hexo-ssg/index.html"
 		},
 		{
-			"source": "/hexo-ssg/:path(.*)",
+			"source": "/hexo-ssg/:path*",
 			"destination": "/apps/hexo-ssg/:path*"
 		},
 		{
@@ -90,7 +90,7 @@
 			"destination": "/apps/next-ssg/:path*.:ext"
 		},
 		{
-			"source": "/next-ssg/:path(.*)",
+			"source": "/next-ssg/:path*",
 			"destination": "/apps/next-ssg/:path*.html"
 		},
 		{
