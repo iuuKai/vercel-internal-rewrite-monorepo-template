@@ -166,7 +166,7 @@
 			"destination": "/apps/express-api/public/images/:path*"
 		},
 		{
-			"source": "/(.*)",
+			"source": "/:path(.*)",
 			"destination": "/apps/express-api/src/app.js"
 		}
 	]
